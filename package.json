@@ -1,0 +1,25 @@
+{
+  "name": "meta-ads-reader-prover",
+  "version": "1.0.0",
+  "description": "A Meta Ads API reader application to demonstrate ongoing integration activity for Ads Management Standard Access approval",
+  "main": "src/index.js",
+  "bin": {
+    "meta-ads-prover": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js start",
+    "run": "node src/index.js run",
+    "test": "node src/index.js test",
+    "status": "node src/index.js status"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.4",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "facebook-nodejs-business-sdk": "^23.0.1",
+    "node-cron": "^4.2.1",
+    "winston": "^3.17.0"
+  }
+}

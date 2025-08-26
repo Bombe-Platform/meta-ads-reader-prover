@@ -1,0 +1,46 @@
+Scope of Work – Meta Ads API Read Prover
+
+Objective
+
+Create a small application in the bombe-platform organisation that regularly connects to the Meta Ads Marketing API and performs safe, read-only requests against a real ad account. The purpose is to demonstrate ongoing integration activity so that Meta approves our app for Ads Management Standard Access.
+
+⸻
+
+What the application should achieve
+	1.	Authenticate correctly
+	•	Use the correct app credentials and system user token that belong to our verified business.
+	•	Ensure the token carries the right advertising permissions.
+	2.	Connect to a real business ad account
+	•	Not the sandbox account.
+	•	All requests should be directed at our real account ID.
+	3.	Perform a repeatable set of safe calls
+	•	Query account metadata, campaigns, ad sets, ads, custom audiences, images, and insights.
+	•	Only read data, never create or modify ads.
+	•	Handle accounts with no active campaigns (still log success).
+	4.	Record the results
+	•	Each run should log when requests were made and whether they succeeded.
+	•	Logs should be easily accessible for audit or to show Meta as evidence.
+	5.	Run automatically on a schedule
+	•	Execute multiple times per day without manual input.
+	•	Keep running consistently for at least 1–2 weeks to build the integration history Meta requires.
+	6.	Be easy to configure and run
+	•	Store credentials and account ID outside the code, so we can change them without edits.
+	•	Simple instructions for running locally or on a hosted service.
+
+⸻
+
+Deliverables
+	•	A new repository under the bombe-platform organisation.
+	•	Clear documentation describing:
+	•	What the app does and why
+	•	How to set it up with our credentials
+	•	How to view logs of successful calls
+	•	How to schedule it for automatic runs
+	•	A working implementation that, once configured, starts making successful read requests and continues without manual supervision.
+
+⸻
+
+Success Criteria
+	•	The app consistently returns successful responses (HTTP 200) from the Meta Ads API over several days.
+	•	Meta’s review team can see that the app has been making regular Ads API calls.
+	•	We can demonstrate integration readiness and re-apply for Ads Management Standard Access.
