@@ -10,7 +10,12 @@
     "start": "node src/index.js start",
     "run": "node src/index.js run",
     "test": "node src/index.js test",
-    "status": "node src/index.js status"
+    "status": "node src/index.js status",
+    "pm2:start": "pm2 start src/index.js --name meta-ads-prover -- start",
+    "pm2:stop": "pm2 stop meta-ads-prover",
+    "pm2:restart": "pm2 restart meta-ads-prover",
+    "pm2:logs": "pm2 logs meta-ads-prover",
+    "pm2:status": "pm2 status meta-ads-prover"
   },
   "keywords": [],
   "author": "",

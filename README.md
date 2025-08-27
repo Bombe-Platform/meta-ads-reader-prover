@@ -111,6 +111,75 @@ node src/index.js start
 node src/index.js status
 ```
 
+### Running as Background Service with PM2
+
+PM2 is a production-ready process manager for Node.js applications that allows you to run applications in the background, automatically restart them if they crash, and manage multiple processes efficiently.
+
+#### Prerequisites
+
+Before using PM2, you need to install it globally:
+
+```bash
+# Install PM2 globally
+npm install -g pm2
+
+# Or with pnpm
+pnpm add -g pm2
+```
+
+#### PM2 Commands
+
+Once PM2 is installed, you can use these commands to manage the application as a background service:
+
+```bash
+# Start the application in background
+pnpm run pm2:start
+
+# Stop the background service
+pnpm run pm2:stop
+
+# Restart the background service
+pnpm run pm2:restart
+
+# View real-time logs from the background service
+pnpm run pm2:logs
+
+# Check the status of the background service
+pnpm run pm2:status
+
+# View all PM2 processes
+pm2 list
+
+# Save PM2 configuration (to auto-restart on system reboot)
+pm2 save
+
+# Setup PM2 to start on system boot
+pm2 startup
+```
+
+#### Benefits of Using PM2
+
+- **Background Execution**: Runs without blocking your terminal
+- **Auto-Restart**: Automatically restarts if the application crashes
+- **Log Management**: Centralized logging with built-in log rotation
+- **Zero-Downtime Restarts**: Update your application without service interruption
+- **System Boot Integration**: Can automatically start when your server reboots
+- **Resource Monitoring**: Built-in monitoring of CPU and memory usage
+
+#### Choosing Between Foreground and Background Execution
+
+**Use foreground execution (`pnpm start`) when:**
+- Testing or debugging the application
+- Running the application temporarily
+- You want to see real-time output in your terminal
+- You're developing or making changes
+
+**Use background execution (`pnpm run pm2:start`) when:**
+- Running in production environments
+- You want the service to continue running after closing your terminal
+- You need the service to automatically restart on crashes or system reboots
+- Managing multiple services on the same server
+
 ## API Requests
 
 The application performs the following read-only requests:
